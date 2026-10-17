@@ -1,0 +1,261 @@
+#modalcard {
+    position: absolute;
+    width: 60%;
+    height: 80%;
+    top: 50%;
+    left: 50%;
+    z-index: 10;
+    transform: translate(-50%, -50%) scale(0);
+    font-family: serif;
+    font-size: 18px;
+    color: hsl(49, 54%, 18%);
+    background-color: #fef7cd;
+    border: 2px solid #635222;
+    border-radius: 5%;
+    container-type: inline-size;
+    z-index: 10;
+}
+#modalcard.active {
+    transform: translate(-50%, -50%) scale(1);
+    transition: transform 0.3s ease-in-out;
+}
+#closered{
+    position: absolute;
+    right: 3%;
+    top: 2%;
+    font-size: 4cqw;
+    border-style:solid;
+    border-color: #635222;
+    border-width: 1px;
+    background-color: #fef7cd;
+    color: hsl(49, 54%, 18%);
+    cursor: pointer;
+    padding: 1%;
+}
+
+
+
+
+.maincontainer{
+    position: absolute;
+    aspect-ratio: 550/766;
+    width: 30%;
+    top: 5%;
+    background-color:none;
+    transform:scale(1);
+    container-type: inline-size;
+    z-index: 12;
+   
+}
+.maincontainer.active {
+    transform:scale(1);
+    transition: transform 0.3s ease-in-out;}
+
+.thecard{
+    position: relative;
+    width: 92%;
+    height: 100%;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    transform-style: preserve-3d;
+    transition: all 0.5s ease;
+    background: none;
+
+}
+
+.thecard.is-flipped{
+    transform: rotateY(180deg) translate(50%, 0%);
+
+    
+}
+
+
+.thefront{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;    
+    cursor: pointer;
+}
+#thefront1{
+    background-image: url("1/ggbluecardfront.png");
+}
+.theback{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    transform: rotateY(180deg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center; }
+#theback1{
+    background-image: url("1/ggbluecardback.png");
+}
+#text1{
+    position: absolute;
+    width: 75%;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: serif;
+    font-size: 5cqw;
+    color: #632222;
+    background-color: #FEd8cd;
+}
+
+#text3{
+    position: absolute;
+    font-style: italic;
+    width: 75%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: serif;
+    font-size: 7cqw;
+    color: #632222;
+    background-color: #FEd8cd;
+}
+
+#button{
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    width: 30%;
+    height: 10%;
+    transform: translate(-50%, -50%);
+   
+    font-size: 7cqw;
+    border-style:solid;
+    border-color: #632222;
+    border-width: 1px;
+    background: linear-gradient(to bottom, white 60%, hwb(0 77% 6%));
+    color: #632222;
+    border-radius: 5px;
+    cursor: pointer;
+    z-index: 10;
+}
+
+@keyframes pop{
+    0% { transform: translate(-50%, -50%) scale(1); }
+    50% { transform: translate(-50%, -50%) scale(1.1); }
+    100% { transform: translate(-50%, -50%) scale(1); }
+}
+#button:hover{
+    animation: pop 0.5s;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+#card2{
+    position: absolute;
+    right: 0%;
+}
+#maincontainer1{
+    position: absolute;
+    left: 17%;
+    background-color: none;
+}
+#maincontainer2{
+    position: absolute;
+    right: 17%;
+    background-color: none;
+}
+#thefront2{
+    background-image: url("1/ggredcardfront.png");
+}
+#theback2{
+    background-image: url("1/ggredcardback.png");
+}
+.textcard{
+    position: absolute;
+    left: 13%;
+    font-size: 7cqw;
+    top: 15%;
+    width: 75%;
+}
+.textcard2{
+    position: absolute;
+    left: 13%;
+    font-size: 7cqw;
+    top: 70%;
+    width: 80%;
+    font-style: italic;
+}
+#h2{
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    font-size: 3.5cqw;
+    font-family: 'Courier New', Courier, monospace;
+}
+#p{
+    position: absolute;
+    top: 67%;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    font-size: 2.5cqw;
+    width: 70%;
+    font-family: 'Courier New', Courier, monospace;
+}
+#blackcat{
+    position: absolute;
+    bottom: 22%;
+    right: 27%;
+    width: 13%;
+    height: auto;
+    z-index: 9;
+}
+#first{
+    position: absolute;
+    top: 0%;
+    width: 100%;
+    height: 100%;
+    visibility: hidden;
+    z-index: 5;
+}
+#step{
+ position: absolute;
+ width: 25%;
+ height: auto;
+ bottom: 5%;
+ left: 30%;
+}
+@keyframes pop2{
+    0% { transform:  scale(1); }
+    50% { transform:  scale(1.1); }
+    100% { transform: scale(1); }
+}
+#OK{
+ position: absolute;
+ width: 9%;
+ height: auto;
+ bottom: 10%;
+ left: 56%;
+}
+#first.active{
+    visibility: visible;
+}
+#OK:hover{
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+#blackcat:hover{
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    animation: pop2 0.5s;
+}
+#reddit{
+    position: absolute;
+    left: 5%;
+}
+#penguin{
+    position: absolute;
+    top: -30%;
+    left: 40%;
+}
+#angry{
+position: absolute;
+    top: -70%;
+    left: 65%;
+}
